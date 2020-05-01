@@ -1,4 +1,4 @@
-# Local Environment and Wordpress Boilerplate  
+# Local Wordpress Instance with PHPUnit
 
 **What will this give you?**
  - Ready to Dev local Wordpress instance which works on OSX, Windows and Linux
@@ -7,6 +7,8 @@
  - Docker container LEMP Stack
  - PHPMyAdmin for easy Database Management
  - WP ClI out of the box 
+ - Separate 'test' database 
+ - PHPUnit installed and run by using `lando phpunit`
  
 
 ## Instructions
