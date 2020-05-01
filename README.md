@@ -6,7 +6,7 @@
  - Composer dependency management for WP Core and WP Plugins
  - Docker container LEMP Stack
  - PHPMyAdmin for easy Database Management
- - WP ClI out of the box 
+ - wp-cli out of the box 
  - Separate 'test' database 
  - PHPUnit installed and run by using `lando phpunit`
  
@@ -17,8 +17,12 @@
 2. Once installed, in root of project run: `lando start`
 3. Install dependencies with composer: `lando composer install` (if you have composer installed locally then you can just run `composer install`)
 4. If .env file does not get created automatically please rename .env.example or copy to .env
-6. Visit http://lando-wp-bedrock.lndo.site/
-7. Database can be viewed with PHPMyAdmin here http://pma.lando-wp-bedrock.lndo.site/
+6. Visit http://lando-wp-phpunit.lndo.site
+7. Database can be viewed with PHPMyAdmin here http://pma.lando-wp-phpunit.lndo.site
+8. To get started with testing you can navigate to plugins directory `cd /public_html/app/plugins`
+9. To create a sample plugin with test file run `wp scaffold plugin-tests my-plugin` (change my plugin to the plugin you want to write a test for)
+10. `cd my-plugin` then run `lando ssh -c "bash bin/install-wp-tests.sh test wordpress wordpress database latest true"` -  this will tell PHPUnit to use the "test" database and use latest version of Wordpress
+11. Once you have written a test just run `lando phpunit`
 
 
 ## Notes
